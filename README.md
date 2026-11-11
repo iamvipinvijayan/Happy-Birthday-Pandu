@@ -7,18 +7,21 @@ Public website for the **Happy Birthday Pandu** mobile app
 | --- | --- |
 | Home | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/ |
 | Privacy policy | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/privacy/ |
+| Account deletion | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/delete-account/ |
 
-Use the privacy policy URL in the Google Play Console (App content → Privacy policy)
-and in App Store Connect.
+In the Google Play Console, use the privacy policy URL under **App content → Privacy
+policy**, and the account deletion URL under **App content → Data safety → Data
+deletion**. Both pages are public and need no sign-in to view, which Google checks.
 
 ## Layout
 
 ```
 docs/                 <- GitHub Pages source (Settings → Pages → main / docs)
-  index.html          <- landing page
-  privacy/index.html  <- privacy policy
-  style.css           <- shared styles, light + dark
-  .nojekyll           <- serve files as-is
+  index.html                 <- landing page
+  privacy/index.html         <- privacy policy
+  delete-account/index.html  <- account deletion instructions
+  style.css                  <- shared styles, light + dark
+  .nojekyll                  <- serve files as-is
 ```
 
 The Pages source is the `docs/` folder rather than the repository root, so the
@@ -28,6 +31,8 @@ site within a minute.
 ## Editing the policy
 
 Edit `docs/privacy/index.html`, update both dates at the top of the page, and
-push. If the app ever gains analytics, ads, a database or any new permission,
+push. The deletion steps appear on three pages — the privacy policy, the
+deletion page and the app's profile dialog — so a change to the flow has to
+land in all three. If the app ever gains analytics, ads, a database or any new permission,
 update this policy in the same change — Play requires the disclosure to match
 what the app actually does.

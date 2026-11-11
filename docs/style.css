@@ -175,3 +175,39 @@ footer.site {
 }
 
 footer.site a { color: var(--muted); }
+
+.kv {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, auto) 1fr;
+  gap: .45rem 1rem;
+  margin: 0;
+}
+
+.kv dt {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.kv dd { margin: 0; }
+
+@media (max-width: 26rem) {
+  .kv { grid-template-columns: 1fr; gap: 0 0; }
+  .kv dt { margin-top: .7rem; }
+  .kv dt:first-child { margin-top: 0; }
+}
+
+.identity { border-left: 3px solid var(--accent); }
+
+.tag {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .7rem;
+  font-weight: 650;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: .2rem .55rem;
+  margin-left: .4rem;
+}
