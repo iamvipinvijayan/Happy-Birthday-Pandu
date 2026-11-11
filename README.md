@@ -7,11 +7,15 @@ Public website for the **Happy Birthday Pandu** mobile app
 | --- | --- |
 | Home | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/ |
 | Privacy policy | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/privacy/ |
-| Account deletion | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/delete-account/ |
+| Account & data deletion | https://iamvipinvijayan.github.io/Happy-Birthday-Pandu/delete-account/ |
 
 In the Google Play Console, use the privacy policy URL under **App content → Privacy
-policy**, and the account deletion URL under **App content → Data safety → Data
-deletion**. Both pages are public and need no sign-in to view, which Google checks.
+policy**. Both pages are public and need no sign-in to view, which Google checks.
+
+From version 1.0.3 the app has no sign-in and collects no data, so Data safety is
+declared as **no data collected** and the **Data deletion** URL is left empty. The
+deletion page stays published anyway: its URL may already be cached by Google, and
+it is where testers from the earlier signed-in builds are told to write.
 
 ## Layout
 
@@ -19,7 +23,7 @@ deletion**. Both pages are public and need no sign-in to view, which Google chec
 docs/                 <- GitHub Pages source (Settings → Pages → main / docs)
   index.html                 <- landing page
   privacy/index.html         <- privacy policy
-  delete-account/index.html  <- account deletion instructions
+  delete-account/index.html  <- account & data deletion
   style.css                  <- shared styles, light + dark
   .nojekyll                  <- serve files as-is
 ```
@@ -30,9 +34,9 @@ site within a minute.
 
 ## Editing the policy
 
-Edit `docs/privacy/index.html`, update both dates at the top of the page, and
-push. The deletion steps appear on three pages — the privacy policy, the
-deletion page and the app's profile dialog — so a change to the flow has to
-land in all three. If the app ever gains analytics, ads, a database or any new permission,
-update this policy in the same change — Play requires the disclosure to match
-what the app actually does.
+Edit `docs/privacy/index.html`, update the effective date at the top of the page,
+and push. The same claims appear on all three pages — the landing page, the privacy
+policy and the deletion page — so a change has to land in each of them. If the app
+ever gains sign-in, analytics, ads, a database or any new permission, update these
+pages in the same change — Play requires the disclosure to match what the app
+actually does.
